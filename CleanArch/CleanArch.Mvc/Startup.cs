@@ -32,6 +32,7 @@ namespace CleanArch.Mvc
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("UniversityIdentityDBConnection")));
+
             services.AddDbContext<UniversityDBContext>(options =>
             { 
                 options.UseSqlServer(Configuration.GetConnectionString("UniversityDBConnection"));

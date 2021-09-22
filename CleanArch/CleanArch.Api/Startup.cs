@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Swashbuckle.Swagger;
+using CleanArch.Api.Configurations;
 
 namespace CleanArch.Api
 {
@@ -42,6 +43,8 @@ namespace CleanArch.Api
                 //c.SwaggerDoc("v1", new Info { Title = "University Api", Version = "v1" }                );
             });
             services.AddMediatR(typeof(Startup));
+
+            services.RegisterAutoMapper();
 
             RegisterServices(services);
 
